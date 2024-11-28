@@ -1,0 +1,601 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="./styles/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+  
+      <!--META TAG OG -->
+      <meta property="og:type" content="website"> 
+      <meta property="og:title" content="Pizzaria Ruben - As Melhores Pizzas Da Cidade !"> 
+      <meta property="og:image" content="./assets/pizzaria-ruben-logo-tipo-1"> 
+      <meta property="og:description" content="Pizzas A partir de R$25.00"> 
+      <meta property="og:site_name" content="Pizzaria Ruben"> 
+  
+  
+  
+    
+    <link rel="stylesheet" href="./styles/output.css">
+    
+  
+    <title>A Melhor Pizzaria Da Cidade</title>
+  </head>
+  <body>
+  
+  <!--HEADER-->
+  <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+    <div class="w-full h-full flex flex-col justify-center items-center">
+      <img src="assets/pizzaria-ruben-logo-tipo-1.png" alt="Logo Pizzaria-Ruben" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+  
+         <h1 class="text-4xl mt-04 mb-2 font-bold text-white">
+          Pizzaria Ruben
+        </h1>
+        
+        <span class="text-white font-medium">Trabalhamos Somente Com Delivery...<i class="bi bi-truck"> </i><i class="bi bi-truck"></i></span>
+  
+        <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+          <span class="text-white font-medium">Terça á Dom - 17:00 as 00:00</span>
+        </div>
+  
+    </div>
+  </header>
+  
+  <!--FIM HEADER-->
+  
+  
+  <h2 class="text-2xl  md:text-3xl  font-bold text-center mt-9 mb-6">
+    Conheça nosso menu
+  </h2>
+  
+  <!--INICIO MENU-->
+  <div id="menu">
+  
+  
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16 ">
+  
+  
+    <!--PRODUTO ITEM-->
+    
+    <div class="flex gap-2">
+      <img src="assets/pizza-calabresa-03.avif"alt="Pizza De Calabresa"
+       class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+    
+      <div>
+        <p class="font-bold ">Pizza De Calabresa</p>
+        <p class="text-sm">Massa, Molho de Tomate, Queijo Mussarela, Calabresa, Cebola e Orégano </p>
+    
+        <!-- Seleção de tamanhos -->
+        <label for="sizeSelect-calabresa">Tamanho:</label>
+        <select id="sizeSelect-calabresa" class="size-select" data-base-price="18.90">
+          <option value="M" data-price="25.00">Médio</option>
+          <option value="G" data-price="35.00">Grande</option>
+          <option value="F" data-price="50.00">Familia</option>
+        </select>
+    
+        <div class="flex items-center gap-2 justify-between mt-3">
+          <p class="font-bold text-lg" id="price-calabresa">R$ 25.00</p>
+          <button class="bg-gray-900 px-5 rounded  add-to-cart-btn" data-name="Pizza De Calabresa"
+           data-price="25.00" 
+           data-size-id=
+           "sizeSelect-calabresa">
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  
+  
+    
+    <!--FIM PRODUTO ITEM--> 
+  
+  
+  
+    
+    <!--PRODUTO ITEM-->
+    
+    <div class="flex gap-2">
+        <img src="assets/pizzas-mussarela-2.avif" alt="Pizza De Mussarela" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+      
+        <div>
+          <p class="font-bold ">Pizza De Mussarela</p>
+          <p class="text-sm">Massa, Molho de Tomate, Queijo Mussarela, Tomate Azeitonas e Orégano </p>
+      
+          <!-- Seleção de tamanhos -->
+          <label for="sizeSelect-mussarela">Tamanho:</label>
+          <select id="sizeSelect-mussarela" class="size-select" data-base-price="18.90">
+            <option value="M" data-price="25.00">Médio</option>
+            <option value="G" data-price="35.00">Grande</option>
+            <option value="F" data-price="50.00">Familia</option>
+          </select>
+      
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg" id="price-mussarela">R$ 25.00</p>
+            <button class="bg-gray-900 px-5 rounded  add-to-cart-btn" data-name="Pizza De Mussarela" data-price="25.00" data-size-id="sizeSelect-mussarela">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    
+    
+    <!--FIM PRODUTO ITEM--> 
+  
+  
+  
+  
+  
+    
+    <!--PRODUTO ITEM-->
+    
+        
+    <div class="flex gap-2">
+        <img src="assets/pizza-portuguesa.4.avif" alt="Pizza De Portuguesa" class="w-28 h-28 rounded-md 
+        hover:scale-110 hover:-rotate-2 duration-300">
+      
+        <div>
+          <p class="font-bold ">Pizza De Portuguesa</p>
+          <span class="text-sm">Massa, Molho de Tomate, Queijo Mussarela, Milho, Cebola, Pimentão Azeitona,
+            Tomate, Ovo Cozido e Orégano
+          </span>
+        </p>
+      
+           <!-- Seleção de tamanhos -->
+        <label for="sizeSelect-portuguesa">Tamanho:</label>
+        <select id="sizeSelect-portuguesa" class="size-select" data-base-price="18.90">
+          <option value="M" data-price="25.00">Médio</option>
+          <option value="G" data-price="35.00">Grande</option>
+          <option value="F" data-price="50.00">Familia</option>
+        </select>
+      
+        <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg" id="price-portuguesa">R$ 25.00</p>
+            <button class="bg-gray-900 px-5 rounded  add-to-cart-btn" data-name="Pizza De Portuguesa"
+             data-price="25.00" data-size-id="sizeSelect-portuguesa">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    
+  
+    
+    <!--FIM PRODUTO ITEM--> 
+  
+  
+  
+  
+  
+    
+    <!--PRODUTO ITEM-->
+    
+    <div class="flex gap-2">
+        <img src="assets/pizza_frango.png" alt="Pizza De Frango Com Catupiry" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+      
+        <div>
+          <p class="font-bold ">Pizza De Frango Com Catupiry</p>
+          <p class="text-sm">Massa, Molho De Tomate, Mussarela, Frango, Catupiry, Cebola, Azeitonas e Orégano. </p>
+      
+          <!-- Seleção de tamanhos -->
+          <label for="sizeSelect-frango">Tamanho:</label>
+          <select id="sizeSelect-frango" class="size-select" data-base-price="25.00">
+            <option value="M" data-price="25.00">Médio</option>
+            <option value="G" data-price="35.00">Grande</option>
+            <option value="F" data-price="50.00">Familia</option>
+          </select>
+      
+          <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg" id="price-mussarela">R$ 25.00</p>
+              <button class="bg-gray-900 px-5 rounded  add-to-cart-btn" data-name="Pizza De Frango Com Catupiry"
+               data-price="25.00" data-size-id="sizeSelect-frango">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+        </div>
+      </div>
+    
+    <!--FIM PRODUTO ITEM--> 
+  
+  
+     <!--PRODUTO ITEM-->
+    
+     <div class="flex gap-2">
+      <img src="assets/pizza-bacon05.avif" alt="Pizza De Bacon" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+    
+      <div>
+        <p class="font-bold ">Pizza De Bacon</p>
+        <p class="text-sm">Massa, Molho de Tomate, Queijo Mussarela, Bacon, Azeitonas e Orégano </p>
+    
+        <!-- Seleção de tamanhos -->
+        <label for="sizeSelect-bacon">Tamanho:</label>
+        <select id="sizeSelect-bacon" class="size-select" data-base-price="25.00">
+          <option value="M" data-price="25.00">Médio</option>
+          <option value="G" data-price="35.00">Grande</option>
+          <option value="F" data-price="50.00">Familia</option>
+        </select>
+    
+        <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg" id="price-bacon">R$ 25.00</p>
+            <button class="bg-gray-900 px-5 rounded  add-to-cart-btn" data-name="Pizza De Bacon" 
+            data-price="25.00" data-size-id="sizeSelect-bacon">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+      </div>
+    </div>
+  
+  
+  
+  
+    
+    <!--FIM PRODUTO ITEM--> 
+  
+  
+     <!--PRODUTO ITEM-->
+    
+     <div class="flex gap-2">
+      <img src="assets/teste.01.jpg" alt="Pizza De 4 Sabores" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+    
+      <div>
+        <p class="font-bold ">Pizza De 4 Sabores</p>
+        <p class="text-sm">Massa, Molho de Tomate, Queijo Mussarela, Calabresa, Portuguesa, Frango Catupiry, Azeitonas e Orégano </p>
+    
+        <!-- Seleção de tamanhos -->
+        <label for="sizeSelect-4sabores">Tamanho:</label>
+        <select id="sizeSelect-4sabores" class="size-select" data-base-price="50.00">
+          <option value="F" data-price="50.00">Familia</option>
+        </select>
+    
+        <div class="flex items-center gap-2 justify-between mt-3">
+          <p class="font-bold text-lg" id="price-4sabores">R$ 50.00</p>
+          <button class="bg-gray-900 px-5 rounded  add-to-cart-btn" data-name="Pizza De 4 Sabores"
+           data-price="50.00" 
+          data-size-id="sizeSelect-4sabores">
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+    
+    <!--FIM PRODUTO ITEM--> 
+  
+  
+    
+     <!--PRODUTO ITEM-->
+    
+     <div class="flex gap-2">
+      <img src="assets/pizza-mussarela-calabresa" alt="Pizza De 4 Sabores" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+    
+      <div>
+        <p class="font-bold ">Pizza De Calabresa e Mussarela</p>
+        <p class="text-sm">Massa, Molho de Tomate, Queijo Mussarela, Calabresa, Cebola, Azeitonas e Orégano </p>
+    
+        <!-- Seleção de tamanhos -->
+        <label for="sizeSelect-mussarelaC">Tamanho:</label>
+        <select id="sizeSelect-mussarelaC" class="size-select" data-base-price="25.00">
+          <option value="M" data-price="25.00">Médio</option>
+          <option value="G" data-price="35.00">Grande</option>
+          <option value="F" data-price="50.00">Familia</option>
+        </select>
+    
+        <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg" id="price-mussarelaC">R$ 25.00</p>
+            <button class="bg-gray-900 px-5 rounded  add-to-cart-btn" data-name="Pizza De Calabresa e Mussarela"
+             data-price="25.00" data-size-id="sizeSelect-mussarelaC">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+      </div>
+    </div>
+  
+  
+  
+  
+    
+    <!--FIM PRODUTO ITEM--> 
+  
+  
+     <!--PRODUTO ITEM-->
+    
+     <div class="flex gap-2">
+      <img src="assets/teste02..jpg" alt="Pizza De Portuguesa Com Frango e Catupiry" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+    
+      <div>
+        <p class="font-bold ">Pizza De Portuguesa Com Frango e Catupiry</p>
+        <p class="text-sm">Massa, Molho de Tomate, Queijo Mussarela, Milho, Cebola, Pimentão, 
+            Tomate, Frango Com Catupiry Ovo Cozido, Azeitonas e Orégano </p>
+    
+        <!-- Seleção de tamanhos -->
+        <label for="sizeSelect-portuguesaF">Tamanho:</label>
+        <select id="sizeSelect-portuguesaF" class="size-select" data-base-price="25.00">
+          <option value="M" data-price="25.00">Médio</option>
+          <option value="G" data-price="35.00">Grande</option>
+          <option value="F" data-price="50.00">Familia</option>
+        </select>
+    
+        <div class="flex items-center gap-2 justify-between mt-3">
+          <p class="font-bold text-lg" id="price-portuguesaF">R$ 25.00</p>
+          <button class="bg-gray-900 px-5 rounded  add-to-cart-btn" data-name="Pizza De Portuguesa Com Frango e Catupiry" data-price="25.00" data-size-id="sizeSelect-portuguesaF">
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+    
+    <!--FIM PRODUTO ITEM--> 
+
+
+     <!--PRODUTO ITEM-->
+    
+     <div class="flex gap-2">
+        <img src="assets/portuguesa-e-bacon.webp" alt="Pizza De Portuguesa e Bacon" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+      
+        <div>
+          <p class="font-bold ">Pizza De Portuguesa e Bacon</p>
+          <p class="text-sm">Massa, Molho de Tomate, Queijo Mussarela, Bacon, Milho, Cebola, Pimentão Azeitona,
+            Tomate, Ovo Cozido e Orégano </p>
+      
+          <!-- Seleção de tamanhos -->
+          <label for="sizeSelect-portuguesaB">Tamanho:</label>
+          <select id="sizeSelect-portuguesaB" class="size-select" data-base-price="25.00">
+            <option value="M" data-price="25.00">Médio</option>
+            <option value="G" data-price="35.00">Grande</option>
+            <option value="F" data-price="50.00">Familia</option>
+          </select>
+      
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg" id="price-portuguesaB">R$ 25.00</p>
+            <button class="bg-gray-900 px-5 rounded  add-to-cart-btn"
+             data-name="Pizza De Portuguesa e Bacon" data-price="25.00" data-size-id="sizeSelect-portuguesaB">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+    
+      
+      <!--FIM PRODUTO ITEM--> 
+
+        <!--PRODUTO ITEM-->
+    
+     
+        <div class="flex gap-2">
+            <img src="assets/pizza-de-banana-e-m&m.jpg" alt="Pizza De Portuguesa e Bacon" 
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+          
+            <div>
+              <p class="font-bold ">Pizza De Banana e Chocolate M&M</p>
+              <p class="text-sm">Massa, Leite Condensado, Canela Em Pó, Chocolate Caseiro e Confeitos De Chocolate M&M</p>
+          
+              <!-- Seleção de tamanhos -->
+              <label for="sizeSelect-bananaChocolate">Tamanho:</label>
+              <select id="sizeSelect-bananaChocolate" class="size-select" data-base-price="25.00">
+                <option value="M" data-price="25.00">Médio</option>
+                <option value="G" data-price="35.00">Grande</option>
+                <option value="F" data-price="50.00">Familia</option>
+              </select>
+          
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg" id="price-bananaChocolate">R$ 25.00</p>
+                <button class="bg-gray-900 px-5 rounded  add-to-cart-btn"
+                 data-name="Pizza De Banana e Chocolate M&M" data-price="25.00" 
+                 data-size-id="sizeSelect-bananaChocolate">
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        
+        
+        
+    
+    
+    
+      
+      <!--FIM PRODUTO ITEM--> 
+
+
+       <!--PRODUTO ITEM-->
+    
+     
+       <div class="flex gap-2">
+        <img src="assets/pizza-calabresa-e-m&m.jpg" alt="Pizza De Calabresa E Chocolate M&M" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+      
+        <div>
+          <p class="font-bold ">Pizza De Calabresa E Chocolate M&M</p>
+          <p class="text-sm">Massa, Molho de Tomate, Queijo Mussarela, Calabresa, Cebola, Orégano, Chocolate Caseiro e Confeitos De Chocolate M&M</p>
+      
+          <!-- Seleção de tamanhos -->
+          <label for="sizeSelect-calabresam&m">Tamanho:</label>
+          <select id="sizeSelect-calabresam&m" class="size-select" data-base-price="25.00">
+            <option value="M" data-price="25.00">Médio</option>
+            <option value="G" data-price="35.00">Grande</option>
+            <option value="F" data-price="50.00">Familia</option>
+          </select>
+      
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg" id="price-calabresam&m">R$ 25.00</p>
+            <button class="bg-gray-900 px-5 rounded  add-to-cart-btn"
+             data-name="Pizza De Calabresa E Chocolate M&M" data-price="25.00" 
+             data-size-id="sizeSelect-calabresam&m">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+
+
+
+  
+  <!--FIM PRODUTO ITEM--> 
+
+     <!--PRODUTO ITEM-->
+    
+     
+     <div class="flex gap-2">
+        <img src="assets/bacon-e-cheddar.jpeg" alt="Pizza De Bacon e Cheddar" 
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+      
+        <div>
+          <p class="font-bold ">Pizza De Bacon e Cheddar</p>
+          <p class="text-sm">Massa, Molho de Tomate, Queijo Mussarela, Bacon, Cheddar, Azeitonas e Orégano</p>
+      
+          <!-- Seleção de tamanhos -->
+          <label for="sizeSelect-baconCheddar">Tamanho:</label>
+          <select id="sizeSelect-baconCheddar" class="size-select" data-base-price="25.00">
+            <option value="M" data-price="25.00">Médio</option>
+            <option value="G" data-price="35.00">Grande</option>
+            <option value="F" data-price="50.00">Familia</option>
+          </select>
+      
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg" id="price-baconCheddar">R$ 25.00</p>
+            <button class="bg-gray-900 px-5 rounded  add-to-cart-btn"
+             data-name="Pizza De Bacon e Cheddar" data-price="25.00" 
+             data-size-id="sizeSelect-baconCheddar">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+
+
+
+  
+  <!--FIM PRODUTO ITEM--> 
+    </main>
+  
+
+    <div class="mx-auto max-w-7xl px-2 my-2">
+      <h2 class="font-bold text-3xl">
+        Bebidas
+      </h2>
+    </div>
+  
+  
+    <!--GRID BEBIDAS-->
+    <!-- Modal de bebidas -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+      
+    <!--BEBIDAS ITEM-->
+  
+  
+  
+  
+     <div class="flex gap-2 w-full">
+    <img src="assets/Tuchaua-teste.png" alt="TUCHAUA" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+    
+      <div class="w-full">
+        <p class="font-bold ">Tuchaua 1,5L</p>
+    
+        <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 4.00</p>
+            <button class="bg-gray-900 px-5 rounded drink-add-to-cart-btn" data-name="Tuchaua 1,5L" data-price="4.00">
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+          </button>
+        </div>
+      </div>
+    </div> 
+    
+  
+    <!-- FIM BEBIDAS ITEM-->
+    
+  
+    <!--BEBIDAS ITEM-->
+   <!-- Bebidas - Coca Lata -->
+   <div class="flex gap-2 w-full">
+    <img src="assets/testes04.png" alt="Regente 1,5L" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+  
+    <div class="w-full">
+      <p class="font-bold ">Regente 1,5L</p>
+  
+      <div class="flex items-center gap-2 justify-between mt-3">
+          <p class="font-bold text-lg">R$ 4.00</p>
+          <button class="bg-gray-900 px-5 rounded drink-add-to-cart-btn" data-name="Regente 1,5L" data-price="4.00">
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+          </button>
+      </div>
+    </div>
+  </div>
+    
+    <!--FIM BEBIDAS ITEM--> 
+    </div> 
+    <!--FIM GRID BEBIDAS-->
+  
+  
+  </div>
+  <!--FIM MENU-->
+  
+  <!--MODAL CART-->
+  <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden  " id="cart-modal">
+  
+    <div class="bg-white p-5  rounded-md min-w-[90%] md:min-w-[600px]">
+      <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho </h2>
+      
+      <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+  
+      <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+  
+      <p class="font-bold mt-4">Endereço de entrega</p>
+      <input type="text" placeholder="Digite seu endereço completo..." id="address"
+       class="w-full border-2 p-1 rounded my-1">
+  
+      <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+  
+      <div class="flex items-center justify-between mt-5 w-full">
+        <button id="close-modal-btn">Fechar</button>
+        <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+      </div>
+  
+  
+    </div>
+  
+  </div>
+  <!--FIM MODAL CART-->
+  
+  <!--BUTTON CART FOOTER-->
+  <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+    <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+      (<span id="cart-count">0</span>)
+      Veja meu carrinho
+      <i class="fa fa-cart-plus text-lg text-white"></i>
+    </button>
+  </footer>
+  <!-- FIM BUTTON CART FOOTER-->
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="js/script.js"></script>
+  
+  
+  </body></html>
